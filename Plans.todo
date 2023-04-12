@@ -1,0 +1,19 @@
+Database Schema Plans
+
+Tables:
+  - Schedule
+  - Teams
+  - Persons
+    -Types: Players, Coaches
+  - Stats/Results
+  - Leagues
+  - Admin
+
+
+Filter Sort and Paging
+
+select ___
+from ____
+where ___
+order by ___ asc|desc
+limit _, _;
