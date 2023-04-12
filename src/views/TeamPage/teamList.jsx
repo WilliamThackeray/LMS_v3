@@ -16,11 +16,11 @@ export default function TeamsList({ viewModel, model }) {
   }
   function handleDelete(e) {
     let delID = e.target.closest('tr').id
-    let delName = model.list()[model.getItemIndex(delID)].name
+    // let delName = model.list()[model.getItemIndex(delID)].name
     model.delete(delID)
     updateData(model.list())
     setShow(true)
-    setTeamDelName(delName)
+    // setTeamDelName(delName)
   }
   function handleSort(col) {
     let curDir = model.sortDir
