@@ -53,7 +53,7 @@ export default function TeamsList({ viewModel, model }) {
             ></SearchBar>
             <TeamsTable
               teams={data}
-              sortCol={model.sortCol}
+              sortCol={model.sortCol} 
               sortDir={model.sortDir}
               viewModel={viewModel}
               onHandleDelete={handleDelete}
