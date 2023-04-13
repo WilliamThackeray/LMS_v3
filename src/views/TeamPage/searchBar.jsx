@@ -9,6 +9,7 @@ export default function SearchBar({title, filterText, onFilterChange}) {
         <input 
           type="text"
           placeholder="Search"
+          value={filterText}
           onChange={(e) => {
             onFilterChange(e.target.value)
           }}
