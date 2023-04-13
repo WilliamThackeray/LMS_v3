@@ -185,7 +185,7 @@ export default class LocalStorageService {
       //return index of team with given id
       //see MDN array 'find' documentation  
       //created separate function for this since multiple methods need to get the index of an item
-      const index = this.model.data.findIndex( item => item.id === id)
+      const index = this.model.data.findIndex( item => item.id == id)
       return index
    }
    cloneObject(obj){

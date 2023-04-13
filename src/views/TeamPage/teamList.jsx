@@ -8,7 +8,7 @@ export default function TeamsList({ viewModel, model }) {
   const [filterText, setFilterText] = useState('')
   const [data, updateData] = useState(model.list())
   const [show, setShow] = useState(false)
-  // const [teamDelName, setTeamDelName] = useState('')
+  const [teamDelName, setTeamDelName] = useState('')
 
   function handleReset() {
     model.reset()
@@ -16,11 +16,11 @@ export default function TeamsList({ viewModel, model }) {
   }
   function handleDelete(e) {
     let delID = e.target.closest('tr').id
-    // let delName = model.list()[model.getItemIndex(delID)].name
+    let delName = model.list()[model.getItemIndex(delID)].name
     model.delete(delID)
     updateData(model.list())
     setShow(true)
-    // setTeamDelName(delName)
+    setTeamDelName(delName)
   }
   function handleSort(col) {
     let curDir = model.sortDir
@@ -43,8 +43,8 @@ export default function TeamsList({ viewModel, model }) {
         <div className="col-sm-8 col-xs-12 m-2 p-3 bg-lightgray rounded">
           <div className="teamsContent">
             <Alert variant='dark' onClose={() => setShow(false)} dismissible>
-              <Alert.Heading>Team:  Deleted</Alert.Heading>
-              {/* <Alert.Heading>Team: {teamDelName} Deleted</Alert.Heading> */}
+              {/* <Alert.Heading>Team:  Deleted</Alert.Heading> */}
+              <Alert.Heading>Team: {teamDelName} Deleted</Alert.Heading>
             </Alert>
             <SearchBar
               filterText={filterText}

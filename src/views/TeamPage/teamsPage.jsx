@@ -6,6 +6,7 @@ import AppViewModel from '../../services/Model/appViewModel.meta.js';
 export default function TeamsPage() {
   let localStorage = new LocalStorageService(AppViewModel.data, AppViewModel.list.entity)
 
+  console.log('localStorage.delete: ', localStorage.delete)
   return (
     <>
       <div className="container-fluid main bg-gray">
