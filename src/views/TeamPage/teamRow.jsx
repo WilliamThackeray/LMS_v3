@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import { BsTrash3 } from 'react-icons/bs'
 import { AiOutlineEdit } from 'react-icons/ai'
+// TODO: add popovers to this
 
 export default function TeamRow({team, id, onHandleDelete, onHandleEdit}) {
   return (
